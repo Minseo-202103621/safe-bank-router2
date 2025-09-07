@@ -96,7 +96,7 @@ export async function GET(req: Request) {
     const kd = await loadKDIC(origin);
 
     // 2) mydata 호출 (Vercel 환경변수 NEXT_PUBLIC_BASE_URL 필요)
-    const base = process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:3000";
+    const base = process.env.NEXT_PUBLIC_BASE_URL || "safe-bank-router2-55yrs9v9f-minseos-projects-001071f6.vercel.app";
     const r = await fetch(`${base}/api/mydata`, { cache: "no-store" });
     const accounts: Account[] = (await r.json()) ?? [];
 
